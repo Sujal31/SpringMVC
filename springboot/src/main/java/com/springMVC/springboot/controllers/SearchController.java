@@ -23,6 +23,10 @@ public class SearchController {
         System.out.println("in search controller");
         System.out.println("search criteria: "+search);
 
+
+        Product p = new Product();
+
+
         List<Product> products = new ArrayList<>();
         products = productRepository.searchByName(search);
         model.addAttribute("products", products);
